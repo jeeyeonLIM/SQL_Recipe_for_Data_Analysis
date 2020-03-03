@@ -39,7 +39,7 @@ ORDER BY
 
 ##### GROUP BY 
 - group by 변수 having cnt <=2 조건 시 cnt = 1,2인 조건만 추출되며 cnt=0유저는 추출되지 않는다!
-- 어찌보면 당연한 일을 착각함. 내가 원하는 유저가 이 조건 때문에 추출에서 제외되었다. OMG
+- 당연한 일을 착각함. 내가 원하는 유저가 이 조건 때문에 추출에서 제외되었다. OMG
 
 
 #### 기타 함수
@@ -76,7 +76,7 @@ ORDER BY
 
 ##### JOIN
 - 중첩조인
-```
+```sql
 select *
 from table1 as A 
 left outer join table2 as B on A.user_id = B.user_id
@@ -91,9 +91,6 @@ left outer join table3 as C on A.user_id = C.user_id
 
 ##### WITH 테이블명 as (쿼리) 
 - 코드 복잡성 감소, 연산 속도상 차이 없음
-
-
-
 
 ## Chapter1. 
 
