@@ -97,8 +97,9 @@ left outer join table3 as C on A.user_id = C.user_id
 
 ## Chapter2.
 
-
 ## Chapter3. 
+
+## Chapter 8. 데이터를 무기로 삼기 위한 분석 기술
 
 
 
