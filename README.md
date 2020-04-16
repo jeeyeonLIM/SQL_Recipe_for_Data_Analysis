@@ -1,5 +1,5 @@
 # 데이터 분석을 위한 SQL 레시피
-- 갖고 싶었던 책인데 정환님께 선물받았다 :)
+- 갖고 싶었던 책인데 선물받았다 :)
 - 괜찮은 부분 쿼리 돌려보면서 익히고, 본 페이지에는 중요 함수 or 개념만 정리해보자.
 
 <p align="center">
@@ -57,6 +57,16 @@ ORDER BY
 - dt between '기간1' and '기간2'
   - 이렇게 between 조건을 사용할 때 기간1 < 기간2 관계가 성립해야 쿼리가 정상적으로 작동함
 
+- ```from_timestamp( cast(to_timestamp('20191201000000','yyyyMMddHHmmss') - interval 86400 second as string) ,'yyyyMMddHHmmss')'```
+     - to_timestamp : timestamp 형식으로 'yyyyMMddHHss' 형태로 변환 
+     - interval : to_timestamp 형식으로 변환해주면, 날짜 계산이 가능 
+     - cast : 형식 변환
+     - from_timestamp : 원하는 형식으로 변환
+
+
+
+
+
 ##### RANK 함수
 ```
 1. RANK() OVER(partition by 변수명, order by)
@@ -91,6 +101,9 @@ left outer join table3 as C on A.user_id = C.user_id
 
 ##### WITH 테이블명 as (쿼리) 
 - 코드 복잡성 감소, 연산 속도상 차이 없음
+
+
+
 
 ## Chapter1. 
 
