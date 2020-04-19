@@ -73,16 +73,18 @@ ORDER BY
 - 동순위 같은 RANK, 최종 랭크는 최종 행 수가 되는 방식
 - Ex) RANK : 1 2 2 4
 
-2. DENSE_RANK OVER(partition by 변수명, order by)
+2. DENSE_RANK() OVER(partition by 변수명, order by)
 - 동순위 같은 RANK, 순위를 차례로 모두 사용해 나타냄
 - Ex) RANK : 1 2 2 3
 
-3. ROW_NUMBER OVER(partition by 변수명, order by)
+3. ROW_NUMBER() OVER(partition by 변수명, order by)
 - 동순위 랜덤 RANK부여, 동순위 내에서는 랜덤으로 순위 부여됨 
 - Ex) RANK : 1 2 3 4 
 ```
 - ```RANK() OVER (PARTITION BY user_id ORDER BY count(distinct product_id) desc) as rk```
   - 유저 id 내에서 가장 많이 구입한 product_id 의 rank 를 생성할 수 있음
+  
+- 주로 중복 허용할 때는 rank(), 중복 허용하지 않을 때는 row_number() 를 사용함.
 
 ##### JOIN
 - 중첩조인
