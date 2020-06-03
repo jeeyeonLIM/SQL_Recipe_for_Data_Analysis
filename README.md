@@ -62,7 +62,12 @@ ORDER BY
      - interval : to_timestamp 형식으로 변환해주면, 날짜 계산이 가능 
      - cast : 형식 변환
      - from_timestamp : 원하는 형식으로 변환
+- ```date_part('year',concat_ws('-',substr(dt,1,4),substr(dt,5,2),substr(dt,7,2))) as years```, ```year(concat_ws('-',substr(dt,1,4),substr(dt,5,2),substr(dt,7,2))) as years```
+   - year 만 추출 
 
+- ```from_timestamp(date_trunc('week',concat_ws('-',substr(dt,1,4),substr(dt,5,2),substr(dt,7,2))),'yyyy-MM-dd' ) as stdt```
+   - week 단위로 끊어서 한 주 시작일자만을 남기고 싶을 때 사용
+   
 
 
 
@@ -104,6 +109,17 @@ left outer join table3 as C on A.user_id = C.user_id
 ##### WITH 테이블명 as (쿼리) 
 - 코드 복잡성 감소, 연산 속도상 차이 없음
 
+##### RANDOM SAMPLING
+```sql
+SELECT * FROM target ORDER BY RAND(100)-- LIMIT 1000
+```
+
+
+*용어정리
+https://www.slideshare.net/keunbongkwak/ss-127085496
+
+*KPI서비스 용어집
+https://docs.adjust.com/ko/kpi-glossary/
 
 
 
