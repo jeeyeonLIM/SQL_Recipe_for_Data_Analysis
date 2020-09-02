@@ -3,8 +3,9 @@
 - 괜찮은 부분 쿼리 돌려보면서 익히고, 본 페이지에는 중요 함수 or 개념만 정리해보자.
 
 <p align="center">
-  <img width="250" height="350" src="https://ifh.cc/g/1zTRD.jpg">
+  <img width="250" height="350" src="https://user-images.githubusercontent.com/45617225/91926983-76b5aa00-ed13-11ea-97af-d60fae42d0ad.png">
 </p>
+
 
 ## 공부하고 싶었던 점 
 - SQL 이용해서 유저 단위 분석, 총 매출 관련 등등 `실무에 도움되는 분석법`을 적용하여 데이터 추출해 보고 싶다.
